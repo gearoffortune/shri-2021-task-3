@@ -15,7 +15,7 @@ export const createProgressSelector = (state$: Observable<State>) => state$.pipe
 export const createCurrentIndexSelector = (state$: Observable<State>) => state$.pipe(
     map(s => s.index),
     distinctUntilChanged(),
-    mergeMapTo(EMPTY),
+    //mergeMapTo(EMPTY)//Is mergeMapTo(EMPTY) really needed?
 );
 
 export const createThemeSelector = (state$: Observable<State>) => state$.pipe(
