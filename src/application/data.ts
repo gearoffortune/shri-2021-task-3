@@ -16,8 +16,8 @@ export function die(error: keyof typeof errors, ...args: any[]): never {
 function assertUnrevoked(state: any) {
     if (state.revoked_) die(1, JSON.stringify(state));
 }
-
-export const data = produce((draft: Draft<State>, action: Action) => {
+//produce has to be wrapped with function to get draft and action?
+export const data = (state: State, action: Action) => produce(state, (draft) => {
     switch (action.type) {
         case 'timer':
             if (!draft.pause) {
