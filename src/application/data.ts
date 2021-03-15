@@ -1,7 +1,7 @@
 import produce, { Draft } from 'immer';
 
 import { Action } from './actions';
-import { descriptors, DRAFT_STATE, errors, INTERVAL, State } from './types';
+import { INTERVAL, State } from './types';
 
 //produce has to be wrapped with function to get draft and action?
 export const data = (state: State, action: Action) => produce(state, (draft) => {
