@@ -1,4 +1,4 @@
-import produce, { Draft } from 'immer';
+import produce from 'immer';
 
 import { Action } from './actions';
 import { INTERVAL, State } from './types';
